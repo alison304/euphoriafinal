@@ -5,5 +5,4 @@ class Vehicle < ApplicationRecord
 
   validates :model, presence: true
   validates :license, uniqueness: true
-  has_many :bookings
 end
