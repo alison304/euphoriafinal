@@ -27,6 +27,7 @@ class VehiclesController < ApplicationController
 
   def update
     @vehicle.update(vehicle_params)
+    redirect_to root_path
   end
 
   def destroy

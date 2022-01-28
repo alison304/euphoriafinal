@@ -3,7 +3,7 @@ class Vehicle < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_one_attached :photo
 
-  validates :model, :color, presence: true
+  validates :model, presence: true
   validates :license, uniqueness: true
   has_many :bookings
 end
