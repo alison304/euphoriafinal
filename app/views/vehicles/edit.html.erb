@@ -1,2 +1,21 @@
-<h1>Vehicles#edit</h1>
-<p>Find me in app/views/vehicles/edit.html.erb</p>
+<div class="container mt-5">
+<br>
+<br>
+  <div class="row">
+    <div class="container">
+      <%= simple_form_for(@vehicle) do |f| %>
+        <%= f.input :license %>
+        <%= f.input :category, collection: ["Auto", "Bicicleta", "Scooter"] %>
+        <%= f.input :model %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <br>
+        <%= f.input :photo, as: :file %>
+        <br>
+        <%= f.submit "Guardar", class: "btn btn-success" %>
+      <% end %>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>

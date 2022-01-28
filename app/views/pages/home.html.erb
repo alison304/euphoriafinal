@@ -10,7 +10,7 @@
         <div class="card-body">
           <p> <%= cl_image_tag vehicle.photo.key, height: 200, width: 230 %></p>
           <p class="card-text"><p> <%= vehicle.model %></p></p>
-          <a href="#" class="btn btn-primary">Ver más</a>
+          <%= link_to 'Ver más', vehicle_path(vehicle), class: "btn btn-primary" %>
         </div>
       </div>
     <% end %>

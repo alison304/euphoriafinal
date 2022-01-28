@@ -1,13 +1,16 @@
-<div class="bookings container mt-large">
-<% @bookings.each do |booking| %>
-<div class="card text-center mb-2">
 
-  <div class="card-body">
-    <h5 class="card-title">Categoria: <%= booking.vehicle.category %></h5>
-    <h5 class="card-title"> Modelo: <%= booking.vehicle.model %></h5>
-    <p class="card-text"><%= booking.vehicle.description %></p>
-    <span class="badge bg-info text-dark"><%= booking.location %> - <%= booking.date %></span>
-  </div>
+<div class="bookings container mt-large">
+  <% @bookings.each do |booking| %>
+    <div class="card text-center mb-2">
+      <div class="card-body">
+        <p> <%= cl_image_tag  booking.vehicle.photo.key, height: 200 %></p>
+        <h5 class="card-title">Usuario: <%= booking.user.full_name %></h5>
+        <p class="card-text"><strong>Vehiculo Modelo: </strong><%=booking.vehicle.model %></p>
+        <p class="card-text"><strong>Vehiculo Licencia: </strong><%=booking.vehicle.license %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
+<div class="mt-10">
+  <%= link_to "NUeva Reservacione", new_booking_path, class: "btn btn-primary " %>     
 </div>
