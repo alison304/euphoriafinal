@@ -32,7 +32,7 @@ class VehiclesController < ApplicationController
 
   def destroy
     @vehicle.destroy
-    redirect_to list_path(@vehicle.booking)
+    redirect_to root_path
   end
 
   private
