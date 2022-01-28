@@ -10,4 +10,6 @@ Rails.application.routes.draw do
    # resources :bookings, only: [:new, :create]
   end
     resources :bookings
+  delete "vehicles/:id/delete", to: "vehicles#destroy", as: "vehicles_delete"
+  get 'vehicles/:id/delete', to: "vehicles#destroy"
 end
