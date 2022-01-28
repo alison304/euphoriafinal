@@ -1,0 +1,17 @@
+<div class="home-banner">
+  <h1><b>Disfruta tu próximo viaje con Euphoria Land</b></h1>
+  <h2>Renta vehículos</h2>
+</div>
+
+<div class="container d-flex" >
+    <% @vehicles.each do | vehicle | %>
+      <div class="card mx-2 my-2" style="width: 18rem;">
+        <h5 class="card-title"><%= vehicle.category %></h5>
+        <div class="card-body">
+          <p> <%= cl_image_tag vehicle.photo.key, height: 200, width: 230 %></p>
+          <p class="card-text"><p> <%= vehicle.model %></p></p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    <% end %>
+</div>
